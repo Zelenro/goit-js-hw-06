@@ -4,7 +4,7 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-const bodyColorEl = document.querySelector('.widget');
+const bodyColorEl = document.querySelector('.widget').parentNode;
 const nameColorEl = document.querySelector('.color');
 const changeColorButtonEl = document.querySelector('.change-color');
 
@@ -18,9 +18,3 @@ function btnClick() {
 // Напиши скрипт, який змінює кольори фону елемента < body > через інлайн -
 // стиль по кліку на button.change - color і виводить значення кольору в span.color.
 // Для генерування випадкового кольору використовуй функцію getRandomHexColor.
-
-// changeColorButtonEl.addEventListener('click', () => {
-//   const randomColor = getRandomHexColor();
-//   bodyColorEl.style.backgroundColor = randomColor;
-//   nameColorEl.textContent = randomColor;
-// });
