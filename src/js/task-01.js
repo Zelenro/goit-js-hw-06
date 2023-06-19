@@ -1,17 +1,13 @@
-const taskOne = document.querySelector(`#categories`);
-const arrTitleItem = [...taskOne.children];
-const category = document.querySelector(`.item`);
-const categoryName = category.firstChild;
-const categoryArr = [...category.lastElementChild.children];
+const taskOne = document.querySelectorAll(`.item`);
+console.log('Number of categories: ', taskOne.length);
 
-arrTitleItem.forEach(item => console.log(item));
+taskOne.forEach(function (item) {
+  console.log('Category:', item.querySelector('h2').textContent);
+  console.log('Elements:', item.lastElementChild.children.length);
+});
 
-// categoryArr.forEach(item => console.log(item.textContent));
-
-console.log('categoryName', categoryName.textContent);
-console.log('Number of categories: ', taskOne.children.length);
-
-console.log(
-  'Category: ',
-  categoryArr.forEach(item => console.log(item.textContent))
-);
+// Напиши скрипт, який:
+// Порахує і виведе в консоль кількість категорій в ul#categories, тобто елементів li.item.
+// Для кожного элемента li.item у списку ul#categories, знайде і виведе в консоль текст заголовку
+// елемента(тегу < h2 >) і кількість елементів в категорії(усіх < li >, вкладених в нього).
+// Для виконання цього завдання потрібно використати метод forEach() і властивості навігації по DOM.
