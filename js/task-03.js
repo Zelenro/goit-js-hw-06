@@ -13,19 +13,22 @@ const images = [
   },
 ];
 
-const imageGalleryEL = document.querySelector('ul');
-
+const imageGalleryEl = document.querySelector('ul.gallery');
 let markupGallery = '';
 
 images.forEach(({ url, alt }) => {
   markupGallery += `
     <li class="gallery-item">
-      <img src="${url}" alt="${alt}" />
+      <div class="gallery-image-container">
+        <img class="gallery-image" src="${url}" alt="${alt}" />
+      </div>
     </li>
   `;
 });
 
-imageGalleryEL.insertAdjacentHTML('beforeend', markupGallery);
+imageGalleryEl.insertAdjacentHTML('beforeend', markupGallery);
+
+imageGalleryEl.style.flexWrap = 'nowrap';
 
 // Напиши скрипт для створення галереї зображень на підставі масиву даних. HTML містить список ul.gallery.
 // <ul class="gallery"></ul>
