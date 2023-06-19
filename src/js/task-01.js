@@ -1,7 +1,7 @@
-const taskOne = document.querySelectorAll(`.item`);
-console.log('Number of categories: ', taskOne.length);
+const taskOneEl = document.querySelectorAll(`.item`);
+console.log('Number of categories: ', taskOneEl.length);
 
-taskOne.forEach(function (item) {
+taskOneEl.forEach(function (item) {
   console.log('Category:', item.querySelector('h2').textContent);
   console.log('Elements:', item.lastElementChild.children.length);
 });

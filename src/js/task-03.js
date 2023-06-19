@@ -13,7 +13,7 @@ const images = [
   },
 ];
 
-const imageGallery = document.querySelector('ul');
+const imageGalleryEL = document.querySelector('ul');
 
 let markupGallery = '';
 
@@ -25,7 +25,7 @@ images.forEach(({ url, alt }) => {
   `;
 });
 
-imageGallery.insertAdjacentHTML('beforeend', markupGallery);
+imageGalleryEL.insertAdjacentHTML('beforeend', markupGallery);
 
 // Напиши скрипт для створення галереї зображень на підставі масиву даних. HTML містить список ul.gallery.
 // <ul class="gallery"></ul>

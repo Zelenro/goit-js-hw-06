@@ -1,17 +1,26 @@
-const button = document.querySelector('#counter');
+const buttonEl = document.querySelector('#counter');
+const decrementEl = buttonEl.lastElementChild;
+const incrementEl = buttonEl.firstElementChild;
+const counterValueEl = document.querySelector('#value');
+let counterValue = 0;
 
-// const countClick = document.querySelector('#value');
+decrementEl.addEventListener('click', () => {
+  counterValue += 1;
+  counterValueEl.textContent = counterValue;
+});
 
-let counterValue = document.querySelector('#value');
+incrementEl.addEventListener('click', () => {
+  counterValue -= 1;
+  counterValueEl.textContent = counterValue;
+});
 
-const handleClick = event => {
-  counterValue.push(1);
-  console.log('qwerty');
-  console.log('event: ', event);
-};
+// console.dir(buttonEl);
+// console.dir(counterClickEl);
+// console.dir(buttonEl);
+// console.dir(decrementEl);
+// console.dir(incrementEl);
 
-button.addEventListener('click', handleClick);
-
-console.dir(button);
-console.dir(countClick);
-console.dir(button);
+// 1. Створи змінну counterValue, в якій буде зберігатися поточне значення лічильника та
+// ініціалізуй її значенням 0.
+// 2. Додай слухачів кліків до кнопок, всередині яких збільшуй або зменшуй значення лічильника.
+// 3. Оновлюй інтерфейс новим значенням змінної counterValue.

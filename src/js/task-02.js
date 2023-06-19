@@ -7,13 +7,13 @@ const ingredients = [
   'Condiments',
 ];
 
-const listIngredients = document.querySelector('#ingredients');
+const listIngredientsEl = document.querySelector('#ingredients');
 
 ingredients.forEach(function (ingredient) {
   const li = document.createElement('li');
   li.textContent = ingredient;
   li.classList.add('item');
-  listIngredients.appendChild(li);
+  listIngredientsEl.appendChild(li);
 });
 
 // Напиши скрипт, який для кожного елемента масиву ingredients:
