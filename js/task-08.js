@@ -4,7 +4,7 @@ const passwordEl = loginFormEl.elements.password;
 
 loginFormEl.addEventListener('submit', event => {
   event.preventDefault();
-  if (!emailEl.value || !passwordEl.value) {
+  if (!emailEl.value.trim() || !passwordEl.value.trim()) {
     alert('All fields must be filled!');
   } else {
     console.log(`Email: ${emailEl.value}, Password: ${passwordEl.value}`);
