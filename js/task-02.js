@@ -17,6 +17,4 @@ ingredients.forEach(function (ingredient) {
   fragment.push(li);
 });
 
-fragment.forEach(function (li) {
-  listIngredientsEl.appendChild(li);
-});
+listIngredientsEl.append(...fragment);
